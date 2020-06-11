@@ -14,13 +14,13 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-        	'identification' => '0934544623',
-        	'name' => 'Oscar Daniel',
-        	'lastname' => 'Coronel Cárdenas',
+        	'identification' => '0111111111',
+        	'name' => 'Anna Maria',
+        	'lastname' => 'Rodriguez Vera',
         	'cellphone' => '0999999992',
         	'address' => 'Barrio del Centenario',
-        	'date_of_birth' => Carbon::createFromDate(1998,10,3),
-        	'email' => 'ocoronel31@gmail.com',
+        	'date_of_birth' => Carbon::createFromDate(1998,10,6),
+        	'email' => 'admin@gmail.com',
         	'password' => 1234,
         	'role_id' => 1
         ]);

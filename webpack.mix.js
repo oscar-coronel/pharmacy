@@ -14,9 +14,9 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
-mix.sass('resources/sass/home.scss', 'public/css');
+mix.sass('resources/sass/menu.scss', 'public/css');
 
-mix.js('resources/js/home.js', 'public/js');
+mix.js('resources/js/fontawesome.js', 'public/js');
 mix.js('resources/js/verificar_cedula.js', 'public/js');
 
 mix.browserSync('http://pharmacy.test');

@@ -6,3 +6,18 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.row{
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+.dropdown-item:hover{
+  background-color: $primary !important;
+  background: $primary !important;
+  color: white !important;
+}
+
+.dropdown-menu{
+  transform: translate3d(-90px, 23px, 0px) !important;
+}
