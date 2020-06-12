@@ -59,7 +59,14 @@
 <div class="form-row">
 	<div class="form-group col-5">
 		<label for="item_category_id">Categorías</label>
-		<select name="item_category_id" id="item_category_id" class="selectpicker form-control" data-live-search="true">
+		<select name="item_category_id" id="item_category_id"
+			class="selectpicker form-control
+				@error('item_category_id')
+					is-invalid
+				@enderror
+			"
+			data-live-search="true"
+		>
 			@foreach($categories as $category)
 				<option value="{{ $category->id }}"
 					{{ $item->item_category_id == $category->id ? 'selected' : null}}
@@ -74,7 +81,14 @@
 	</div>
 	<div class="form-group col-5 offset-2">
 		<label for="provider_id">Proveedor</label>
-		<select name="provider_id" id="provider_id" class="selectpicker form-control" data-live-search="true">
+		<select name="provider_id" id="provider_id"
+			class="selectpicker form-control
+				@error('provider_id')
+					is-invalid
+				@enderror
+			"
+			data-live-search="true"
+		>
 			@foreach($providers as $provider)
 				<option value="{{ $provider->id }}"
 					{{ $item->provider_id == $provider->id ? 'selected' : null}}
