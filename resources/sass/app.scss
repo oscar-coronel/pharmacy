@@ -18,6 +18,13 @@
   color: white !important;
 }
 
-.dropdown-menu{
+
+header .dropdown-menu{
   transform: translate3d(-90px, 23px, 0px) !important;
+}
+
+.dataTables_paginate .pagination,
+.dataTables_filter{
+	display: flex;
+	justify-content: flex-end;
 }

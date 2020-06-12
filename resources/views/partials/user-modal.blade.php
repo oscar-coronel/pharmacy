@@ -111,7 +111,7 @@
 
           <div class="form-row">
             <div class="form-group col-5">
-              <label for="email" class="col-form-label text-dark">Correo</label>
+              <label for="email" class="col-form-label text-dark">Email</label>
               <input type="text" name="email" id="email" placeholder="Correo Electrónico"
                 class="form-control
                     @error('email')

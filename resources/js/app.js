@@ -1,4 +1,7 @@
 require('./bootstrap');
+require('bootstrap-select');
+require('datatables.net');
+require('datatables.net-bs4');
 
 var forms = $('#auth_user_form, #data_form');
 
@@ -33,6 +36,37 @@ window.deleteInfo = (html_element) => {
 	}).then((result) => {
 		if (result.value) {
 			element.parent().children('form')[0].submit();
+		}
+	});
+}
+
+
+let tables = $('table');
+
+if (tables.length > 0) {
+	tables.DataTable({
+		lengthChange: false,
+		ordering: false,
+		pageLength: 5,
+		language: {
+			sProcessing: 'Procesando...',
+			sLengthMenu: 'Mostrar _MENU_ registros',
+			sZeroRecords: 'No se encontraron datos',
+			sEmptyTable: 'No existen registros',
+			sInfo: '_MAX_ registros disponibles',
+			sInfoEmpty: '0 registros disponibles',
+			sInfoFiltered: '(Se filtraron _TOTAL_ registros)',
+			sInfoPostFix: '',
+			sSearch: 'Buscar:',
+			sUrl: '',
+			sInfoThousands: ',',
+			sLoadingRecords: 'Cargando...',
+			oPaginate: {
+				sFirst: 'Primero',
+				sLast: 'Último',
+				sNext: 'Siguiente',
+				sPrevious: 'Anterior'
+			}
 		}
 	});
 }

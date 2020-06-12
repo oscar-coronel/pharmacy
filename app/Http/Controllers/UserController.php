@@ -20,6 +20,13 @@ class UserController extends Controller
 	public function __construct(Users $users)
 	{
 		$this->middleware('auth');
+
+        $this->middleware('admin')
+                ->only('supervisorIndex','supervisorCreate','supervisorStore','supervisorEdit','supervisorUpdate','supervisorDestroy');
+
+        $this->middleware('admin_supervisor')
+                ->only('sellerIndex','sellerCreate','sellerStore','sellerEdit','sellerUpdate','sellerDestroy');
+
         $this->users = $users;
 	}
 

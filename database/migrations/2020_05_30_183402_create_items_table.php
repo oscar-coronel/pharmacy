@@ -19,7 +19,6 @@ class CreateItemsTable extends Migration
             $table->string('brand');
             $table->decimal('price',8,2);
             $table->boolean('is_iva');
-            $table->timestamp('date_of_expiry');
             $table->timestamps();
 
             $table->unsignedBigInteger('provider_id');

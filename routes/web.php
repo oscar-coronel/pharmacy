@@ -44,3 +44,12 @@ Route::get('/sellers/users/create','UserController@sellerCreate')->name('users.s
 Route::get('/sellers/users/edit/{user}','UserController@sellerEdit')->name('users.seller.edit');
 Route::patch('/sellers/users/update/{user}','UserController@sellerUpdate')->name('users.seller.update');
 Route::delete('/sellers/users/destroy/{user}','UserController@sellerDestroy')->name('users.seller.destroy');
+
+// Rutas del cliente
+Route::resource('customers','CustomerController')->except(['show']);
+
+// Rutas de los proveedores
+Route::resource('providers','ProviderController')->except(['show']);
+
+// Rutas de los artículos
+Route::resource('items','ItemController')->except(['show']);

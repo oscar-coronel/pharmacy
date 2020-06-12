@@ -5,8 +5,6 @@ namespace App\Repositories;
 use App\User;
 
 class Users{
-	private $paginate = 7;
-
 
 	public function update(User $user, $data){
 		$user->update($data);
@@ -18,7 +16,7 @@ class Users{
                         ->where('state','=',1)
                         ->where('role_id','=',2)
                         ->latest()
-                        ->paginate($this->paginate);
+                        ->get();
 	}
 
 	public function supervisorStore($data){
@@ -59,7 +57,7 @@ class Users{
                         ->where('state','=',1)
                         ->where('role_id','=',3)
                         ->latest()
-                        ->paginate($this->paginate);
+                        ->get();
 	}
 
 	public function sellerStore($data){

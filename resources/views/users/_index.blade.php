@@ -2,24 +2,28 @@
 
 @section('content')
 	<div class="row mb-3">
-		<div class="col-12 d-flex justify-content-between align-items-center">
-			<h1 class="mb-0 text-primary">{{ $title }}</h1>
-			<a href="{{ route($crear_href) }}" class="btn btn-primary">
-				<span>Crear</span>
-			</a>
+		<div class="col-12">
+			<div class="row">
+				<div class="col-12 d-flex justify-content-between align-items-center">
+					<h1 class="mb-0 text-primary">{{ $title }}</h1>
+					<a href="{{ route($crear_href) }}" class="btn btn-primary">
+						<span>Crear</span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-12">
 			<div>
-				<table class="table table-bordered">
+				<table class="table table-striped table-bordered w-100">
 					<thead class="{{ $thead_bg }}">
 						<tr>
 							<th>Cédula</th>
 							<th>Nombres</th>
 							<th>Apellidos</th>
 							<th>Celular</th>
-							<th>Correo</th>
+							<th>Email</th>
 							<th>Dirección</th>
 							<th>Fecha de Nacimiento</th>
 							<th class="text-center">Editar</th>
@@ -54,7 +58,6 @@
 					</tbody>
 				</table>
 			</div>
-			{{ $users->links() }}
 		</div>
 	</div>
 @endsection

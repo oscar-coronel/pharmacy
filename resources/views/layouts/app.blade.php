@@ -13,6 +13,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-select.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
@@ -31,7 +32,9 @@
 </head>
 <body>
   <div class="area text-dark d-flex flex-column justify-content-between" style="min-height: 100vh;">
-    @include('partials.header')
+    <header>
+      @include('partials.header')
+    </header>
     <main class="my-3">
       @yield('content')
     </main>
