@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-        	'identification' => '0111111111',
+        	'identification' => '1303753618',
         	'name' => 'Anna Maria',
         	'lastname' => 'Rodriguez Vera',
         	'cellphone' => '0999999992',
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         User::create([
-            'identification' => '0934544333',
+            'identification' => '1706172648',
             'name' => 'Andrés Juan',
             'lastname' => 'Stewart Alvarado',
             'cellphone' => '0999999923',
@@ -38,7 +38,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         User::create([
-            'identification' => '0983882116',
+            'identification' => '0100967652',
             'name' => 'Anna Mariela',
             'lastname' => 'Andrade',
             'cellphone' => '0999998880',

@@ -6,7 +6,7 @@
 			  	Clientes
 			  </div>
 			  <div class="card-body text-center">
-		  		<img src="/img/customer.svg" class="img-fluid rounded-circle border" style="height: 150px; width: 150px; border: 2px solid #dee2e6!important;" />
+		  		<img src="/img/customer.svg" class="img-fluid" style="height: 150px; width: 150px;" />
 			  </div>
 			</div>
 		</a>

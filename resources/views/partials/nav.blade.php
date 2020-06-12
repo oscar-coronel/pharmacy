@@ -9,7 +9,7 @@
         </a>
       </li>
       <li class="has-subnav">
-        <a href="#" class="">
+        <a href="{{ route('transaction') }}" class="{{ setActive('transaction') }}">
           <i class="fa fa-usd fa-2x"></i>
           <span class="nav-text">
             Compras y Facturación
@@ -17,7 +17,7 @@
         </a>
       </li>
       <li class="has-subnav">
-        <a href="#" class="">
+        <a href="{{ route('report') }}" class="{{ setActive('report') }}">
           <i class="fa fa-file fa-2x"></i>
           <span class="nav-text">
             Reportes

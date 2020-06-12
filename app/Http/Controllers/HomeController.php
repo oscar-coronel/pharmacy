@@ -21,8 +21,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function maintenace()
+    public function maintenance()
     {
         return view('maintenance');
+    }
+
+    public function transaction()
+    {
+        return view('transaction');
+    }
+
+    public function report()
+    {
+        return view('report');
     }
 }

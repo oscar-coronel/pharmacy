@@ -6,7 +6,7 @@
 			  	Supervisores
 			  </div>
 			  <div class="card-body text-center">
-		  		<img src="/img/supervisor.svg" class="img-fluid rounded-circle border" style="height: 150px; width: 150px; border: 2px solid #dee2e6!important;" />
+		  		<img src="/img/supervisor.svg" class="img-fluid" style="height: 150px; width: 150px;" />
 			  </div>
 			</div>
 		</a>
@@ -18,7 +18,7 @@
 			  	Vendedores
 			  </div>
 			  <div class="card-body text-center">
-		  		<img src="/img/cashier.svg" class="img-fluid rounded-circle border" style="height: 150px; width: 150px; border: 2px solid #dee2e6!important;" />
+		  		<img src="/img/cashier.svg" class="img-fluid" style="height: 150px; width: 150px;" />
 			  </div>
 			</div>
 		</a>
@@ -30,7 +30,7 @@
 			  	Clientes
 			  </div>
 			  <div class="card-body text-center">
-		  		<img src="/img/customer.svg" class="img-fluid rounded-circle border" style="height: 150px; width: 150px; border: 2px solid #dee2e6!important;" />
+		  		<img src="/img/customer.svg" class="img-fluid" style="height: 150px; width: 150px;" />
 			  </div>
 			</div>
 		</a>
@@ -42,7 +42,7 @@
 			  	Artículos
 			  </div>
 			  <div class="card-body text-center">
-		  		<img src="/img/trolley.svg" class="img-fluid rounded-circle border" style="height: 150px; width: 150px; border: 2px solid #dee2e6!important;" />
+		  		<img src="/img/trolley.svg" class="img-fluid" style="height: 150px; width: 150px;" />
 			  </div>
 			</div>
 		</a>
@@ -54,7 +54,7 @@
 			  	Proveedores
 			  </div>
 			  <div class="card-body text-center">
-		  		<img src="/img/provider.svg" class="img-fluid rounded-circle border" style="height: 150px; width: 150px; border: 2px solid #dee2e6!important;" />
+		  		<img src="/img/provider.svg" class="img-fluid" style="height: 150px; width: 150px;" />
 			  </div>
 			</div>
 		</a>

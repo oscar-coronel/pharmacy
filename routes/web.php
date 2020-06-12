@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/temp', function () {
-    return view('home2');
-});
 
 // Rutas de Login y Logout
 Route::get('/','Auth\LoginController@showLoginForm')->name('login.show');
@@ -23,7 +20,9 @@ Route::post('/','Auth\LoginController@login')->name('login');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
 
 // Rutas del menú
-Route::get('/maintenance', 'HomeController@maintenace')->name('maintenance');
+Route::get('/maintenance', 'HomeController@maintenance')->name('maintenance');
+Route::get('/transaction', 'HomeController@transaction')->name('transaction');
+Route::get('/report', 'HomeController@report')->name('report');
 
 // Rutas para actulizar datos personales
 Route::patch('/user_auth/{user}/update', 'UserController@update')->name('auth_user.update');
