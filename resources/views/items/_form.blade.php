@@ -66,6 +66,11 @@
 				>{{ $category->name }}</option>
 			@endforeach
 		</select>
+		@error('item_category_id')
+			<div class="invalid-feedback d-block" role="alert">
+				<strong>{{ $message }}</strong>
+			</div>
+		@enderror
 	</div>
 	<div class="form-group col-5 offset-2">
 		<label for="provider_id">Proveedor</label>
@@ -76,6 +81,11 @@
 				>{{ $provider->name }}</option>
 			@endforeach
 		</select>
+		@error('provider_id')
+			<div class="invalid-feedback d-block" role="alert">
+				<strong>{{ $message }}</strong>
+			</div>
+		@enderror
 	</div>
 </div>
 <hr />

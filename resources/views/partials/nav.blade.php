@@ -9,7 +9,7 @@
         </a>
       </li>
       <li class="has-subnav">
-        <a href="notificacion_alarma.php" class="{{ setActive('menu.php') }}">
+        <a href="#" class="">
           <i class="fa fa-usd fa-2x"></i>
           <span class="nav-text">
             Compras y Facturación
@@ -17,7 +17,7 @@
         </a>
       </li>
       <li class="has-subnav">
-        <a href="actividades_varias.php" class="{{ setActive('menu.php') }}">
+        <a href="#" class="">
           <i class="fa fa-file fa-2x"></i>
           <span class="nav-text">
             Reportes
