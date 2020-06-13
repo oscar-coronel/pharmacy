@@ -6,7 +6,7 @@
           <a class="dropdown-toggle" id="user-options" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <span>{{ Auth::user()->name }}</span>
           </a>
-          <div class="dropdown-menu" aria-labelledby="">
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="">
             <a href="#" role="button" class="dropdown-item" data-toggle="modal" data-target="#user_modal" onclick="event.preventDefault();">
               Datos Personales
             </a>
