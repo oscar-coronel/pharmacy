@@ -52,3 +52,8 @@ Route::resource('providers','ProviderController')->except(['show']);
 
 // Rutas de los artículos
 Route::resource('items','ItemController')->except(['show']);
+
+
+
+
+Route::patch('/users/reset_password/{user}', 'UserController@resetPassword')->name('users.reset.password');

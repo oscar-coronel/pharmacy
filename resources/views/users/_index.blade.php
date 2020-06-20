@@ -26,6 +26,9 @@
 							<th>Email</th>
 							<th>Dirección</th>
 							<th>Fecha de Nacimiento</th>
+							@if(Auth::user()->isAdmin())
+								<th class="text-center">Resetear Contraseña</th>
+							@endif
 							<th class="text-center">Editar</th>
 							<th class="text-center">Eliminar</th>
 						</tr>
@@ -40,6 +43,17 @@
 								<td>{{ $user->email }}</td>
 								<td>{{ $user->address }}</td>
 								<td>{{ $user->presenter()->dateOfBirth()->format('Y-m-d') }}</td>
+								@if(Auth::user()->isAdmin())
+									<td class="text-center">
+										<a href="#" onclick="event.preventDefault();" data-toggle="modal" data-target="#edit_password_modal_{{ $user->id }}" title="Resetear Contraseña">
+											<img src="/img/update.svg" style="height: 30px;" />
+										</a>
+										@include('users._update-password-modal', [
+											'table_user' => $user,
+											'table_user_id' => $user->id,
+										])
+									</td>
+								@endif
 								<td class="text-center">
 									<a href="{{ route($edit_href, $user) }}" title="Editar">
 										<img src="/img/edit.svg" style="height: 30px;" />

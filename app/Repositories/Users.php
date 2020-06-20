@@ -10,6 +10,12 @@ class Users{
 		$user->update($data);
 	}
 
+	public function updatePassword(User $user, $key, $value){
+		$user->update([
+			$key => $value
+		]);
+	}
+
 
 	public function supervisorIndex(){
 		return User::with(['role'])

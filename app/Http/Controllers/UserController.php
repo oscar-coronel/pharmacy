@@ -22,7 +22,7 @@ class UserController extends Controller
 		$this->middleware('auth');
 
         $this->middleware('admin')
-                ->only('supervisorIndex','supervisorCreate','supervisorStore','supervisorEdit','supervisorUpdate','supervisorDestroy');
+                ->only('supervisorIndex','supervisorCreate','supervisorStore','supervisorEdit','supervisorUpdate','supervisorDestroy','resetPassword');
 
         $this->middleware('admin_supervisor')
                 ->only('sellerIndex','sellerCreate','sellerStore','sellerEdit','sellerUpdate','sellerDestroy');
@@ -43,6 +43,20 @@ class UserController extends Controller
     	$this->users->update($user, $data);
     	return back()->with('status','Contraseña actualizada con éxito.');
     }
+
+    public function resetPassword(User $user){
+        $key = 'password_reset_'.$user->id;
+        $data = request()->validate([
+            $key => 'required|confirmed',
+        ]);
+        $this->users->updatePassword($user, 'password', $data[$key]);
+        return back()->with('status','Contraseña restablecida con éxito.');
+    }
+
+
+
+
+
 
 
 
