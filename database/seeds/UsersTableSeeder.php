@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
         	'cellphone' => '0999999992',
         	'address' => 'Barrio del Centenario',
         	'date_of_birth' => Carbon::createFromDate(1998,10,6),
-        	'email' => 'admin@gmail.com',
+        	'email' => 'administrador@gmail.com',
         	'password' => 1234,
         	'role_id' => 1
         ]);
