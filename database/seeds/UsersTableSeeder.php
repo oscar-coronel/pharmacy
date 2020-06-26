@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
         	'address' => 'Barrio del Centenario',
         	'date_of_birth' => Carbon::createFromDate(1998,10,6),
         	'email' => 'administrador@gmail.com',
-        	'password' => 1234,
+        	'password' => 'a}s[i%1(7/*-&',
         	'role_id' => 1
         ]);
 
@@ -33,7 +33,7 @@ class UsersTableSeeder extends Seeder
             'address' => 'Los Ceibos',
             'date_of_birth' => Carbon::createFromDate(1992,12,8),
             'email' => 'supervisor@gmail.com',
-            'password' => 1234,
+            'password' => 'a}s[i%1(7/*-&',
             'role_id' => 2
         ]);
 
@@ -45,7 +45,7 @@ class UsersTableSeeder extends Seeder
             'address' => 'Samborondón',
             'date_of_birth' => Carbon::createFromDate(1994,7,28),
             'email' => 'vendedora@gmail.com',
-            'password' => 1234,
+            'password' => 'a}s[i%1(7/*-&',
             'role_id' => 3
         ]);
     }
