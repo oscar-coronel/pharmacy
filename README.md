@@ -1,2 +1,2 @@
-# web_platform_project
-Proyecto del 2do Interciclo para la materia de plataformas web
+# Farmacia
+Proyecto de Farmacia del 7mo semestre en Ingeniería en Ciencias de la Computación
