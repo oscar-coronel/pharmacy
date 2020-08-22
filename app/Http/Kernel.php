@@ -67,5 +67,6 @@ class Kernel extends HttpKernel
         'supervisor' => \App\Http\Middleware\CheckIfYouAreASupervisor::class,
         'seller' => \App\Http\Middleware\CheckIfYouAreASeller::class,
         'admin_supervisor' => \App\Http\Middleware\CheckIfYouAreAnAdminOrSupervisor::class,
+        'admin_seller' => \App\Http\Middleware\CheckIfYouAreAnAdminOrSeller::class,
     ];
 }

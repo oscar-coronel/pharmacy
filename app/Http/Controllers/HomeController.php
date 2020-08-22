@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\Products;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+
+    private $products;
+
+    public function __construct(Products $products)
     {
         $this->middleware('auth');
+        $this->products = $products;
     }
 
     /**
@@ -28,11 +28,14 @@ class HomeController extends Controller
 
     public function transaction()
     {
-        return view('transaction');
+        $products = $this->products->getProducts();
+        return view('transaction', compact('products'));
     }
 
-    public function report()
+    public function report(Products $products)
     {
-        return view('report');
+        return view('report', [
+            'products' => $products->getProducts()
+        ]);
     }
 }

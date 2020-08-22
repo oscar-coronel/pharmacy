@@ -15,6 +15,7 @@ class CreateItemPurchaseDetailsTable extends Migration
     {
         Schema::create('item_purchase_details', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->integer('quantity');
             $table->decimal('price',8,2);
             $table->decimal('subtotal',8,2);
@@ -23,7 +24,7 @@ class CreateItemPurchaseDetailsTable extends Migration
             $table->timestamps();
 
             $table->unsignedBigInteger('item_id');
-            $table->unsignedBigInteger('item_pruchase_id');
+            $table->unsignedBigInteger('item_purchase_id');
             $table->enum('state', ['1','0'])->default(1);
         });
     }

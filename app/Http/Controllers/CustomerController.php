@@ -35,19 +35,19 @@ class CustomerController extends Controller
         return redirect()->route('customers.index')->with('status', 'Cliente creado con éxito.');
     }
 
-    public function edit(Customer $customer){
+    public function edit($customer){
     	return view('customers.edit', [
             'user' => $customer
         ]);
     }
 
-    public function update(UpdateCustomer $request, Customer $customer){
+    public function update(UpdateCustomer $request, $customer){
     	$data = $request->validated();
         $this->customers->update($customer, $data);
         return redirect()->route('customers.index')->with('status', 'Cliente actualizado con éxito.');
     }
 
-    public function destroy(Customer $customer){
+    public function destroy($customer){
     	$this->customers->destroy($customer);
         return redirect()->route('customers.index')->with('status', 'Cliente eliminado con éxito.');
     }

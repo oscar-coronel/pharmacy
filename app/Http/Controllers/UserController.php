@@ -30,14 +30,14 @@ class UserController extends Controller
         $this->users = $users;
 	}
 
-    public function update(SaveUser $request, User $user){
+    public function update(SaveUser $request, $user){
     	$this->authorize('isSameUser', $user);
     	$data = $request->validated();
     	$this->users->update($user, $data);
     	return back()->with('status','Datos actualizados con éxito.');
     }
 
-    public function updatePassword(UpdateUserPassword $request, User $user){
+    public function updatePassword(UpdateUserPassword $request, $user){
     	$this->authorize('isSameUser', $user);
     	$data = $request->validated();
     	$this->users->update($user, $data);
@@ -77,20 +77,20 @@ class UserController extends Controller
         return redirect()->route('users.supervisor.index')->with('status', 'Supervisor creado con éxito.');
     }
 
-    public function supervisorEdit(User $user){
+    public function supervisorEdit($supervisor){
         return view('users.supervisor-edit', [
-            'user' => $user
+            'user' => $supervisor
         ]);
     }
 
-    public function supervisorUpdate(UpdateSupervisor $request, User $user){
+    public function supervisorUpdate(UpdateSupervisor $request, $supervisor){
         $data = $request->validated();
-        $this->users->supervisorUpdate($user, $data);
+        $this->users->supervisorUpdate($supervisor, $data);
         return redirect()->route('users.supervisor.index')->with('status', 'Supervisor actualizado con éxito.');
     }
 
-    public function supervisorDestroy(User $user){
-        $this->users->supervisorDestroy($user);
+    public function supervisorDestroy($supervisor){
+        $this->users->supervisorDestroy($supervisor);
         return redirect()->route('users.supervisor.index')->with('status', 'Supervisor eliminado con éxito.');
     }
 
@@ -113,20 +113,20 @@ class UserController extends Controller
         return redirect()->route('users.seller.index')->with('status', 'Vendedor creado con éxito.');
     }
 
-    public function sellerEdit(User $user){
+    public function sellerEdit($seller){
         return view('users.seller-edit', [
-            'user' => $user
+            'user' => $seller
         ]);
     }
 
-    public function sellerUpdate(UpdateSeller $request, User $user){
+    public function sellerUpdate(UpdateSeller $request, $seller){
         $data = $request->validated();
-        $this->users->sellerUpdate($user, $data);
+        $this->users->sellerUpdate($seller, $data);
         return redirect()->route('users.seller.index')->with('status', 'Vendedor actualizado con éxito.');
     }
 
-    public function sellerDestroy(User $user){
-        $this->users->sellerDestroy($user);
+    public function sellerDestroy($seller){
+        $this->users->sellerDestroy($seller);
         return redirect()->route('users.seller.index')->with('status', 'Vendedor eliminado con éxito.');
     }
 

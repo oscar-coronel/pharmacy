@@ -7,7 +7,7 @@ use App\Customer;
 class Customers{
 
 	public function index(){
-		return Customer::where('state','=',1)
+		return Customer::where('state','=','1')
                         ->latest()
                         ->get();
 	}

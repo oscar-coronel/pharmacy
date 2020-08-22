@@ -2,6 +2,9 @@
 
 return [
 
+    // Custom
+    'address' => env('ADDRESS', 'Barrio Centenario'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

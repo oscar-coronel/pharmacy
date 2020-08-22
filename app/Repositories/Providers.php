@@ -7,7 +7,8 @@ use App\Provider;
 class Providers{
 
 	public function index(){
-		return Provider::where('state','=',1)
+		return Provider::with(['items'])
+						->where('state','=','1')
                         ->latest()
                         ->get();
 	}

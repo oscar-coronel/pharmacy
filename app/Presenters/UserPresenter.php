@@ -18,6 +18,10 @@ class UserPresenter extends Presenter{
 		return !empty($this->model->date_of_birth) ? $this->dateOfBirth()->format('Y-m-d') : '';
 	}
 
+	public function completeName(){
+		return $this->model->name.' '.$this->model->lastname;
+	}
+
 }
 
 ?>

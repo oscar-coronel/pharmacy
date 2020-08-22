@@ -19,7 +19,7 @@ class Users{
 
 	public function supervisorIndex(){
 		return User::with(['role'])
-                        ->where('state','=',1)
+                        ->where('state','=','1')
                         ->where('role_id','=',2)
                         ->latest()
                         ->get();
@@ -60,7 +60,7 @@ class Users{
 
 	public function sellerIndex(){
 		return User::with(['role'])
-                        ->where('state','=',1)
+                        ->where('state','=','1')
                         ->where('role_id','=',3)
                         ->latest()
                         ->get();

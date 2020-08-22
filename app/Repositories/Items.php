@@ -7,7 +7,7 @@ use App\Item;
 class Items{
 	public function index(){
 		return Item::with(['provider', 'category'])
-						->where('state','=',1)
+						->where('state','=','1')
                         ->latest()
                         ->get();
 	}

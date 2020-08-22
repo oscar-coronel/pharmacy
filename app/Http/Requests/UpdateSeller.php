@@ -23,7 +23,7 @@ class UpdateSeller extends FormRequest
      */
     public function rules()
     {
-        $user = $this->route('user');
+        $user = $this->route('seller');
         return [
             'user_identification' => 'required|digits_between:10,10|unique:users,identification,'.$user->id,
             'user_name' => 'required',

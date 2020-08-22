@@ -35,19 +35,19 @@ class ProviderController extends Controller
         return redirect()->route('providers.index')->with('status', 'Proveedor creado con éxito.');
     }
 
-    public function edit(Provider $provider){
+    public function edit($provider){
     	return view('providers.edit', [
             'user' => $provider
         ]);
     }
 
-    public function update(UpdateProvider $request, Provider $provider){
+    public function update(UpdateProvider $request, $provider){
     	$data = $request->validated();
         $this->providers->update($provider, $data);
         return redirect()->route('providers.index')->with('status', 'Proveedor actualizado con éxito.');
     }
 
-    public function destroy(Provider $provider){
+    public function destroy($provider){
     	$this->providers->destroy($provider);
         return redirect()->route('providers.index')->with('status', 'El proveedor y sus artículos fueron eliminados con éxito.');
     }

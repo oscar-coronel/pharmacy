@@ -15,6 +15,7 @@ class CreateInvoiceDetailsTable extends Migration
     {
         Schema::create('invoice_details', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->integer('quantity');
             $table->decimal('price',8,2);
             $table->decimal('subtotal',8,2);

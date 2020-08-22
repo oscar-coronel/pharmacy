@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 // Rutas de Login y Logout
 Route::get('/','Auth\LoginController@showLoginForm')->name('login.show');
 Route::post('/','Auth\LoginController@login')->name('login');
@@ -32,17 +31,17 @@ Route::patch('/user_auth/{user}/update_password', 'UserController@updatePassword
 Route::get('/supervisors/users','UserController@supervisorIndex')->name('users.supervisor.index');
 Route::post('/supervisors/users','UserController@supervisorStore')->name('users.supervisor.store');
 Route::get('/supervisors/users/create','UserController@supervisorCreate')->name('users.supervisor.create');
-Route::get('/supervisors/users/edit/{user}','UserController@supervisorEdit')->name('users.supervisor.edit');
-Route::patch('/supervisors/users/update/{user}','UserController@supervisorUpdate')->name('users.supervisor.update');
-Route::delete('/supervisors/users/destroy/{user}','UserController@supervisorDestroy')->name('users.supervisor.destroy');
+Route::get('/supervisors/users/edit/{supervisor}','UserController@supervisorEdit')->name('users.supervisor.edit');
+Route::patch('/supervisors/users/update/{supervisor}','UserController@supervisorUpdate')->name('users.supervisor.update');
+Route::delete('/supervisors/users/destroy/{supervisor}','UserController@supervisorDestroy')->name('users.supervisor.destroy');
 
 // Rutas del Vendedor
 Route::get('/sellers/users','UserController@sellerIndex')->name('users.seller.index');
 Route::post('/sellers/users','UserController@sellerStore')->name('users.seller.store');
 Route::get('/sellers/users/create','UserController@sellerCreate')->name('users.seller.create');
-Route::get('/sellers/users/edit/{user}','UserController@sellerEdit')->name('users.seller.edit');
-Route::patch('/sellers/users/update/{user}','UserController@sellerUpdate')->name('users.seller.update');
-Route::delete('/sellers/users/destroy/{user}','UserController@sellerDestroy')->name('users.seller.destroy');
+Route::get('/sellers/users/edit/{seller}','UserController@sellerEdit')->name('users.seller.edit');
+Route::patch('/sellers/users/update/{seller}','UserController@sellerUpdate')->name('users.seller.update');
+Route::delete('/sellers/users/destroy/{seller}','UserController@sellerDestroy')->name('users.seller.destroy');
 
 // Rutas del cliente
 Route::resource('customers','CustomerController')->except(['show']);
@@ -52,6 +51,22 @@ Route::resource('providers','ProviderController')->except(['show']);
 
 // Rutas de los artículos
 Route::resource('items','ItemController')->except(['show']);
+
+// Rutas de compras de artículos
+Route::resource('purchases', 'ItemPurchaseController')->except(['show','edit','update']);
+
+// Rutas de products
+Route::post('/products/{product}/update_price', 'ProductController@updatePrice')->name('products.update_price');
+
+// Rutas de facturas
+Route::resource('invoices', 'InvoiceController')->except(['show','edit','update']);
+
+
+Route::get('invoice/{invoice}/pdf', 'InvoiceController@pdf')->name('invoice.pdf');
+
+Route::get('box_closure/{date}', 'BoxController@closure')->name('box.closure');
+Route::get('kardex/{product}', 'KardexController@kardex')->name('kardex');
+
 
 
 

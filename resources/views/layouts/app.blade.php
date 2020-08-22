@@ -25,7 +25,19 @@
 
     <script>
       window.Laravel = {
-        csrfToken: "{{ csrf_token() }}"
+        csrfToken: "{{ csrf_token() }}",
+        purchases_index: "{{ route('purchases.index') }}",
+        purchases_store: "{{ route('purchases.store') }}",
+        invoices_index: "{{ route('invoices.index') }}",
+        invoices_store: "{{ route('invoices.store') }}",
+        products_update_price: "{{ route('products.update_price', 'param') }}",
+        invoice_pdf: "{{ route('invoice.pdf', 'param') }}",
+        box_closure: "{{ route('box.closure', [
+          'date' => 'date'
+        ]) }}",
+        kardex: "{{ route('kardex', [
+          'product' => 'product',
+        ]) }}",
       };
     </script>
 

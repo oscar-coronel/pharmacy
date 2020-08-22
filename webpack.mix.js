@@ -18,6 +18,9 @@ mix.sass('resources/sass/menu.scss', 'public/css');
 
 mix.js('resources/js/fontawesome.js', 'public/js');
 mix.js('resources/js/verificar_cedula.js', 'public/js');
+mix.js('resources/js/purchase.js', 'public/js');
+mix.js('resources/js/invoice.js', 'public/js');
+mix.js('resources/js/transaction.js', 'public/js');
 
 mix.browserSync('http://pharmacy.test');
 

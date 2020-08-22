@@ -6,7 +6,7 @@ use App\ItemCategory;
 
 class ItemCategories{
 	public function index(){
-		return ItemCategory::where('state','=',1)
+		return ItemCategory::where('state','=','1')
                         ->latest()
                         ->get();
 	}
