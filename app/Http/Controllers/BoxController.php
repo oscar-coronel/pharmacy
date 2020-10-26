@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class BoxController extends Controller
 {
-
 	private $invoices;
 
 	public function __construct(Invoices $invoices){
@@ -22,5 +21,4 @@ class BoxController extends Controller
 		$pdf = $pdf->loadView('pdf.box_closure', compact('invoices'));
 		return $pdf->stream();
 	}
-
 }
